@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var test = require('/code/node_v1/public/javascripts');
 var path = require('path');
 var query = require('../query.js');
 var timerObj = {};
@@ -114,7 +113,7 @@ router.get('/unit/list',function(req, res, next) {
 	getData(`SELECT * FROM unit`,res,true)
 });
 
-router.all('/login',function(req, res, next){
+router.all('/checkLogin',function(req, res, next){
     console.log('---',req.body);
 	getData(`SELECT * FROM user WHERE user="${req.body.username}" AND pwd="${req.body.password}";`,res,false)
 });

@@ -28,7 +28,7 @@ class Login extends Component {
 		if (!this.state.userName || !this.state.pwd) {
 			message.error("用户名或密码不能为空！");
 		}else{
-			axios.post('/login',{
+			axios.post('/checkLogin',{
 				username:this.state.userName,
 				password:this.state.pwd
 			}).then((res)=>{
