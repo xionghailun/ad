@@ -10,10 +10,17 @@ var timerObj = {};
 function getData (sql,res,isArray) {
 	query(sql)
 		.then(function(result){
-			res.send({
-				success:true,
-				data:isArray ? result : result[0]
-			})
+			console.log('---',result);
+			if (result[0]) {
+				res.send({
+					success:true,
+					data:isArray ? result : result[0]
+				})
+			} else {
+				res.send({
+					success:false
+				})
+			}
 		})
 		.catch(function(err){
 			res.send({
@@ -76,7 +83,8 @@ router.all('*',function(req,res, next){
 });
 
 router.get('/', function(req, res, next) {
-  res.sendFile(path.join(__dirname,'../dist/build/index.html'));
+	res.setHeader('Content-Type', 'text/html');
+	res.sendFile(path.join(__dirname,'../dist/build/index.html'));
 });
 router.get('/change/:table/:id/:state',function(req, res, next) {
 	let id = req.params.id;
@@ -110,6 +118,10 @@ router.get('/unit/list',function(req, res, next) {
 router.all('/login',function(req, res, next){
     console.log('---',req.body);
 	getData(`SELECT * FROM user WHERE user="${req.body.username}" AND pwd="${req.body.password}";`,res,false)
+});
+router.get('*', function(req, res, next) {
+	res.setHeader('Content-Type', 'text/html');
+	res.sendFile(path.join(__dirname,'../dist/build/index.html'));
 });
 
 module.exports = router;

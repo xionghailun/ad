@@ -9,7 +9,7 @@ class AdvertiserList extends Component {
 		this.setState({
 			'data[0].state':state
 		})
-		axios.get(`http://localhost:3000/change/account/1106172863/${state ? 1 : 0}`)
+		axios.get(`/change/account/1106172863/${state ? 1 : 0}`)
 			.then(res => {
 
 			});
@@ -85,8 +85,8 @@ class AdvertiserList extends Component {
 		)
 	}
 	componentDidMount() {
-		let user = localStorage.getItem('user');
-		axios.get(`http://localhost:3000/advertiser/list/${user}`)
+		let id = sessionStorage.getItem('sessionId');
+		axios.get(`/advertiser/list/${id}`)
 			.then(res => {
 				if (res.data.success) {
 					let data = res.data.data;

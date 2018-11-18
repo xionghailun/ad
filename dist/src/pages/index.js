@@ -35,10 +35,6 @@ class Index extends Component {
 		super(props);
 		let isLogin = window.sessionStorage.getItem('sessionId');
 		let openKey = '';
-		if (!isLogin) {
-			props.history.push({ pathname:'/login' });
-			return false;
-		}
 		if (props.location.pathname.indexOf('/ad/')>-1) {
 			openKey = 'sub1';
 		} else if (props.location.pathname.indexOf('/finance')>-1) {
@@ -51,6 +47,10 @@ class Index extends Component {
 			openKey:openKey
 		};
 		this.loginOut = this.loginOut.bind(this);
+		if (!isLogin) {
+			props.history.push({ pathname:'/login' });
+			return false;
+		}
 	}
 
 	toggle = () => {

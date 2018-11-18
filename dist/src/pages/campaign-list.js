@@ -11,7 +11,7 @@ class AdvertiserList extends Component {
 		this.setState({
 			data:this.state.data
 		})
-		axios.get(`http://localhost:3000/change/campaign/${id}/${state ? 1 : 0}`)
+		axios.get(`/change/campaign/${id}/${state ? 1 : 0}`)
 			.then(res => {
 				message.success('状态修改成功！');
 			});
@@ -109,7 +109,7 @@ class AdvertiserList extends Component {
 		)
 	}
 	componentDidMount() {
-		axios.get(`http://localhost:3000/campaign/list`)
+		axios.get(`/campaign/list`)
 			.then(res => {
 				if (res.data.success) {
 					let data = res.data.data;

@@ -7,7 +7,7 @@ const Option = Select.Option;
 
 class AdvertiserList extends Component {
 	stateChange = (state)=>{
-		axios.get(`http://localhost:3000/change/project/1208684444/${state ? 1 : 0}`)
+		axios.get(`/change/project/1208684444/${state ? 1 : 0}`)
 			.then(res => {
 
 			});
@@ -73,7 +73,7 @@ class AdvertiserList extends Component {
 		)
 	}
 	componentDidMount() {
-		axios.get(`http://localhost:3000/project/list/1106172863`)
+		axios.get(`/project/list/1106172863`)
 			.then(res => {
 				if (res.data.success) {
 					let data = res.data.data;
