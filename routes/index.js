@@ -100,7 +100,7 @@ router.get('/change/:table/:id/:state',function(req, res, next) {
 	}
 	res.sendStatus(200);
 });
-router.get('/advertiser/list/:user',function(req, res, next) {
+router.get('/advertiser/list/:id',function(req, res, next) {
 	getData(`SELECT * FROM account WHERE user="${req.params.user}"`,res,true)
 });
 router.get('/project/list/:id',function(req, res, next) {

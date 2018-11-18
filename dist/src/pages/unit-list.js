@@ -142,7 +142,7 @@ class AdvertiserList extends Component {
 		)
 	}
 	componentDidMount() {
-		axios.get(`http://localhost:3000/unit/list`)
+		axios.get(`/unit/list`)
 			.then(res => {
 				if (res.data.success) {
 					let data = res.data.data;
