@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var plugin = require('/code/plugin.js');
 var test = require('/code/node_v1/public/javascripts');
 var path = require('path');
 var query = require('../query.js');
