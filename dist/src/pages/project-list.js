@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
-import {Input, Select, Button, Radio, Table, Switch, DatePicker, Icon} from 'antd';
+import {Input, Select, Button, Radio, Table, Switch, DatePicker, Icon, message} from 'antd';
 import axios from 'axios';
 
 const Option = Select.Option;
@@ -11,6 +11,9 @@ class AdvertiserList extends Component {
 			.then(res => {
 
 			});
+	};
+	createProject = ()=>{
+		message.error('您没有新建项目的权限！');
 	};
 	state = {
 		columns: [{
@@ -66,7 +69,7 @@ class AdvertiserList extends Component {
 							<Radio.Button value="register">已归档</Radio.Button>
 						</Radio.Group>
 					</div>
-					<Button type="primary" style={{ position:'absolute',right:45,top:70,zIndex:99 }}><Icon type="plus"></Icon>新建</Button>
+					<Button type="primary" style={{ position:'absolute',right:45,top:70,zIndex:99 }} onClick={this.createProject} ><Icon type="plus"></Icon>新建</Button>
 					<Table columns={this.state.columns} dataSource={this.state.data} />
 				</div>
 			</div>

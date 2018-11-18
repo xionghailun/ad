@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
-import {Input, Button, Form, Icon, DatePicker} from 'antd';
+import {Input, Button, Form, Icon, DatePicker, message} from 'antd';
 
 const FormItem = Form.Item;
 const formItemLayout = {
@@ -21,13 +21,16 @@ class CampaignDetail extends Component {
 			isEdit:!this.state.isEdit
 		})
 	}
+	createCampaign() {
+		message.error('您没有新建广告单元的权限！');
+	}
 	render() {
 		return (
 			<div className="campaignDetail">
 				<div className="headerBar clear">
 					<div className="floatLeft">
 						<Button><Icon type="left"></Icon><NavLink to="/ad/campaign/list">返回列表</NavLink></Button>
-						<Button type="primary" style={{ marginLeft:10 }}><NavLink to="/ad/campaign/detail"><Icon type="plus"></Icon>新建广告单元</NavLink></Button>
+						<Button type="primary" style={{ marginLeft:10 }} onClick={this.createCampaign} ><Icon type="plus"></Icon>新建广告单元</Button>
 					</div>
 					<div className="floatRight">
 						{this.state.isEdit ? <Button onClick={this.toggleState}><Icon type="save"></Icon>保存</Button>: <Button onClick={this.toggleState}><Icon type="edit"></Icon>编辑</Button>}

@@ -101,7 +101,7 @@ router.get('/change/:table/:id/:state',function(req, res, next) {
 	res.sendStatus(200);
 });
 router.get('/advertiser/list/:id',function(req, res, next) {
-	getData(`SELECT * FROM account WHERE user="${req.params.user}"`,res,true)
+	getData(`SELECT * FROM account WHERE user="${req.params.id}"`,res,true)
 });
 router.get('/project/list/:id',function(req, res, next) {
 	getData(`SELECT * FROM project WHERE accountId="${req.params.id}"`,res,true)

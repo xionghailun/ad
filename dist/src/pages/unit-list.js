@@ -24,6 +24,9 @@ class AdvertiserList extends Component {
 			}
 		})
 	};
+	createUnit = ()=> {
+		message.error('您没有新建单元的权限！');
+	};
 	state = {
 		columns: [{
 			title: 'ID',
@@ -134,7 +137,7 @@ class AdvertiserList extends Component {
 						<Button>
 							<Icon type="download"></Icon>下载数据
 						</Button>
-						<Button type="primary"><Icon type="plus"></Icon>新建</Button>
+						<Button type="primary" onClick={this.createUnit}><Icon type="plus"></Icon>新建</Button>
 					</div>
 					<Table columns={this.state.columns} dataSource={this.state.data} />
 				</div>
