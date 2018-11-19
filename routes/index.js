@@ -28,7 +28,7 @@ function getData (sql,res,isArray) {
 		});
 }
 function start (id) {
-	let num = parseFloat(Math.random().toFixed(2));
+	let num = parseFloat(Math.random()*2.toFixed(2));
 	let num2 = Math.ceil(Math.random()*4);
 	let num3 = Math.ceil(Math.random()*40);
 	let num4 = Math.ceil(Math.random()*40);
