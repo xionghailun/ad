@@ -10,6 +10,7 @@ import UnitList from './unit-list';
 import ProjectDetail from './project-detail.js';
 import CampaignDetail from './campaign-detail.js';
 import UnitDetail from './unit-detail.js';
+import Recharge from './recharge.js';
 import 'antd/dist/antd.css';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -127,6 +128,7 @@ class Index extends Component {
 							<Route path="/ad/project/detail" component={ProjectDetail} />
 							<Route path="/ad/campaign/detail" component={CampaignDetail} />
 							<Route path="/ad/unit/detail" component={UnitDetail} />
+							<Route path="/recharge" component={Recharge} />
 						</div>
 					</Content>
 					<Footer>

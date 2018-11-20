@@ -245,3 +245,7 @@
 	position:fixed;
 	bottom:100px;
 }
+.App .recharge {
+	background:#fff;
+	padding:50px;
+}

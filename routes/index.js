@@ -28,7 +28,7 @@ function getData (sql,res,isArray) {
 		});
 }
 function start (id) {
-	let num = parseFloat(Math.random()*2.toFixed(2));
+	let num = parseFloat(Math.random().toFixed(2))*2;
 	let num2 = Math.ceil(Math.random()*4);
 	let num3 = Math.ceil(Math.random()*40);
 	let num4 = Math.ceil(Math.random()*40);
@@ -123,6 +123,24 @@ router.get('/campaign/list',function(req, res, next) {
 });
 router.get('/unit/list',function(req, res, next) {
 	getData(`SELECT * FROM unit`,res,true)
+});
+router.get('/transfer/list',function(req, res, next) {
+	getData(`SELECT * FROM transfer`,res,true)
+});
+router.post('/transfer/save',function(req, res, next) {
+	console.log('body',req.body)
+	query(`INSERT INTO transfer (client,adver,amount) VALUES ("${req.body.client}","${req.body.adver}",${req.body.amount})`)
+		.then(function(result){
+			console.log('insert',result)
+		})
+	query(`SELECT id,budget FROM account WHERE id=1106172863`)
+		.then(function(result){
+			console.log('update',result)
+			query(`UPDATE account SET budget=${result[0].budget+req.body.amount} WHERE id=${result[0].id}`);
+		})
+	res.send({
+		success:true
+	})
 });
 
 router.all('/checkLogin',function(req, res, next){

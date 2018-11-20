@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Input, Select, Button, Radio, Table, Switch} from 'antd';
+import axios from 'axios';
 
 const Option = Select.Option;
 
@@ -7,36 +8,25 @@ class AdvertiserList extends Component {
 	state = {
 		columns: [{
 			title: '付款用户',
-			dataIndex: 'payUser',
-			key: 'payUser',
+			dataIndex: 'client',
+			key: 'client',
 			render: text => <div><a href="javascript:;">{text}</a>广告代理</div>,
 		}, {
 			title: '收款用户',
-			dataIndex: 'user',
-			key: 'user',
+			dataIndex: 'adver',
+			key: 'adver',
 			render: text => <div><a href="javascript:;">{text}</a>广告主(可操作)</div>,
 		}, {
 			title: '金额',
-			dataIndex: 'budget',
-			key: 'budget',
+			dataIndex: 'amount',
+			key: 'amount',
+			render: text => <div>￥{text}</div>
 		}, {
 			title: '创建时间',
-			key: 'createTime',
-			dataIndex: 'createTime'
+			key: 'create_time',
+			dataIndex: 'create_time'
 		}],
-		data:[{
-			key: '1',
-			payUser:'武汉东道网络科技有限公司',
-			user: '浙江宅神网络科技有限公司',
-			budget:'￥5000.00',
-			createTime:'2018-04-16',
-		},{
-			key: '2',
-			payUser:'武汉东道网络科技有限公司',
-			user: '浙江宅神网络科技有限公司',
-			budget:'￥5000.00',
-			createTime:'2018-04-16',
-		}]
+		data:[]
 	};
 
 	render() {
@@ -47,6 +37,22 @@ class AdvertiserList extends Component {
 				</div>
 			</div>
 		)
+	}
+
+	componentDidMount() {
+		axios.get(`/transfer/list`)
+			.then(res => {
+				if (res.data.success) {
+					let data = res.data.data;
+					data.forEach(function(item){
+						item.create_time = new Date(item.create_time).toString();
+					})
+					this.setState({
+						data:data
+					})
+				}
+			});
+
 	}
 }
 

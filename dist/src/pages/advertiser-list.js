@@ -48,7 +48,7 @@ class AdvertiserList extends Component {
 			render:(state)=>{
 				return (
 					<div>
-						<Switch checkedChildren="启用" unCheckedChildren="暂停" checked={state===0 ? false : true} onChange={this.stateChange} style={{ marginRight:'10px',verticalAlign:'middle' }}  />
+						{/*<Switch checkedChildren="启用" unCheckedChildren="暂停" checked={state===0 ? false : true} onChange={this.stateChange} style={{ marginRight:'10px',verticalAlign:'middle' }}  />*/}
 						<div style={{ display:'inline-block',verticalAlign:'middle' }}>
 							<span className="dot"></span>
 							<span>审核成功</span>

@@ -68,7 +68,11 @@ class AdvertiserList extends Component {
 			render:(state,data,idx)=>{
 				return (
 					<div>
-						<Switch checkedChildren="启用" unCheckedChildren="暂停" checked={state===0 ? false : true} onChange={(state)=>{this.stateChange(state,idx,data.id)}} style={{ marginRight:'10px',verticalAlign:'middle' }} />
+						{/*<Switch checkedChildren="启用" unCheckedChildren="暂停" checked={state===0 ? false : true} onChange={(state)=>{this.stateChange(state,idx,data.id)}} style={{ marginRight:'10px',verticalAlign:'middle' }} />*/}
+						<div style={{ display:'inline-block',verticalAlign:'middle' }}>
+							<span className="dot"></span>
+							<span>审核成功</span>
+						</div>
 						<Button style={{ float:'right' }}><NavLink to="/ad/campaign/detail">详情</NavLink></Button>
 					</div>
 				)
