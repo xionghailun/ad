@@ -28,7 +28,14 @@ class AdvertiserList extends Component {
 		}],
 		data:[]
 	};
-
+	formatDate(date) {
+		let year = date.getFullYear();
+		let month = date.getMonth()+1;
+		let day = date.getDate();
+		let hour = date.getHours();
+		let minute = date.getMinutes();
+		return year + '-' + (month>9 ? month : '0'+month) + '-' + (day>9 ? day : '0'+day) + ' ' + (hour>9 ? hour : '0'+hour) + ':' + (minute>9 ? minute : '0'+minute);
+	}
 	render() {
 		return (
 			<div className="transferList">
@@ -40,12 +47,13 @@ class AdvertiserList extends Component {
 	}
 
 	componentDidMount() {
+		let _this = this;
 		axios.get(`/transfer/list`)
 			.then(res => {
 				if (res.data.success) {
 					let data = res.data.data;
 					data.forEach(function(item){
-						item.create_time = new Date(item.create_time).toString();
+						item.create_time = _this.formatDate(new Date(item.create_time));
 					})
 					this.setState({
 						data:data
