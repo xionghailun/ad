@@ -15,13 +15,13 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            <state relative-caret-position="-486">
+              <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="query.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/query.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unit-list.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/src/pages/unit-list.js">
+      <file leaf-file-name="unit-detail.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/src/pages/unit-detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            <state relative-caret-position="165">
+              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -152,7 +152,6 @@
         <option value="$PROJECT_DIR$/../plugin.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/dist/src/App.js" />
-        <option value="$PROJECT_DIR$/dist/src/pages/unit-detail.js" />
         <option value="$PROJECT_DIR$/dist/src/pages/login.js" />
         <option value="$PROJECT_DIR$/dist/src/pages/campaign-detail.js" />
         <option value="$PROJECT_DIR$/dist/src/pages/unit-list.js" />
@@ -165,6 +164,7 @@
         <option value="$PROJECT_DIR$/dist/src/pages/transfer-list.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/query.js" />
+        <option value="$PROJECT_DIR$/dist/src/pages/unit-detail.js" />
       </list>
     </option>
   </component>
@@ -349,12 +349,12 @@
       <workItem from="1542637700219" duration="3261000" />
       <workItem from="1542724407294" duration="4835000" />
       <workItem from="1542812527235" duration="1404000" />
-      <workItem from="1543115278724" duration="1417000" />
+      <workItem from="1543115278724" duration="2829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81547000" />
+    <option name="totallyTimeSpent" value="82959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -631,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/src/pages/unit-detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/src/pages/unit-list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -715,17 +705,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/query.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/src/pages/unit-detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

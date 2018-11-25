@@ -54,6 +54,29 @@ const unitInfo = {
 			status: 'done',
 			url: '/static/images/2_3.jpg',
 		}]
+	},
+	'get_62':{
+		name:'get_79',
+		link:'http://47.105.115.5:8000/',
+		style:'三图',
+		type:'理财',
+		title:'姐妹花用手机玩赚，集体逆袭白富美，嗨爆朋友圈！',
+		fileList:[{
+			uid: '-1',
+			name: 'xxx.png',
+			status: 'done',
+			url: '/static/images/2_1.jpg',
+		},{
+			uid: '0',
+			name: 'xxx.png',
+			status: 'done',
+			url: '/static/images/2_2.jpg',
+		},{
+			uid: '1',
+			name: 'xxx.png',
+			status: 'done',
+			url: '/static/images/2_3.jpg',
+		}]
 	}
 }
 
