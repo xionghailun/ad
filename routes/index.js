@@ -8,7 +8,7 @@ var timerObj = {};
 function getData (sql,res,isArray) {
 	query(sql)
 		.then(function(result){
-			console.log('---',result);
+			// console.log('---',result);
 			if (result[0]) {
 				res.send({
 					success:true,
@@ -28,14 +28,14 @@ function getData (sql,res,isArray) {
 		});
 }
 function start (id) {
-	let num = parseFloat(Math.random().toFixed(2))*2;
-	let num2 = Math.ceil(Math.random()*4);
+	let num = parseFloat(Math.random().toFixed(2))*3;
+	let num2 = Math.ceil(Math.random()*12);
 	let num3 = Math.ceil(Math.random()*40);
 	let num4 = Math.ceil(Math.random()*40);
 	function unFinish () {
 		query(`SELECT * FROM unit WHERE id=${id}`)
 			.then(function(result){
-				console.log(`UPDATE unit SET request=${result[0].request+num2*num3*num4}, expose=${result[0].expose+num2*num3}, click=${result[0].click+num2}, resume=${result[0].resume+num} WHERE id = ${id}`)
+				// console.log(`UPDATE unit SET request=${result[0].request+num2*num3*num4}, expose=${result[0].expose+num2*num3}, click=${result[0].click+num2}, resume=${result[0].resume+num} WHERE id = ${id}`)
 				query(`UPDATE unit SET request=${result[0].request+num2*num3*num4}, expose=${result[0].expose+num2*num3}, click=${result[0].click+num2}, resume=${result[0].resume+num} WHERE id = ${id}`);
 			})
 			.catch(function(err){
@@ -43,7 +43,7 @@ function start (id) {
 			})
 		query(`SELECT a.id,a.request,a.expose,a.click,a.resume FROM campaign a JOIN unit b ON a.cname=b.cname WHERE b.id=${id}`)
 			.then(function(result){
-				console.log(`campaign result`,result);
+				// console.log(`campaign result`,result);
 				query(`UPDATE campaign SET request=${result[0].request+num2*num3*num4}, expose=${result[0].expose+num2*num3}, click=${result[0].click+num2}, resume=${result[0].resume+num} WHERE id = '${result[0].id}'`);
 			})
 			.catch(function(err){
@@ -51,7 +51,7 @@ function start (id) {
 			})
 		query(`SELECT a.id,a.resume FROM project a JOIN unit b ON a.name=b.pname WHERE b.id=${id}`)
 			.then(function(result){
-				console.log(`project result`,result);
+				// console.log(`project result`,result);
 				query(`UPDATE project SET resume=${result[0].resume+num} WHERE id = '${result[0].id}'`);
 			})
 			.catch(function(err){
@@ -65,7 +65,7 @@ function start (id) {
 	}
 	query(`SELECT a.id,a.resume,a.budget FROM account a JOIN unit b ON a.id=b.ownerId WHERE b.id=${id}`)
 		.then(function(result){
-			console.log(`account result`,result);
+			// console.log(`account result`,result);
 			if (result[0].budget > result[0].resume+num) {
 				query(`UPDATE account SET resume=${result[0].resume+num} WHERE id = '${result[0].id}'`);
 				unFinish();
