@@ -126,12 +126,12 @@ class AdvertiserList extends Component {
 								<Radio.Button value="register4">审核失败</Radio.Button>
 							</Radio.Group>
 						</div>
-						<div style={{width:'50%',textAlign: 'right',float:'right'}}>
-							<Radio.Group value='unRegister'>
-								<Radio.Button value="unRegister">未归档</Radio.Button>
-								<Radio.Button value="register">已归档</Radio.Button>
-							</Radio.Group>
-						</div>
+						{/*<div style={{width:'50%',textAlign: 'right',float:'right'}}>*/}
+							{/*<Radio.Group value='unRegister'>*/}
+								{/*<Radio.Button value="unRegister">未归档</Radio.Button>*/}
+								{/*<Radio.Button value="register">已归档</Radio.Button>*/}
+							{/*</Radio.Group>*/}
+						{/*</div>*/}
 					</div>
 					<div className="createBtn">
 						<Button>

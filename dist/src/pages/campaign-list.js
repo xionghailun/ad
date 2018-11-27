@@ -98,12 +98,12 @@ class AdvertiserList extends Component {
 					<Button style={{width: '65px'}} type="primary">查询</Button>
 				</div>
 				<div className="grid">
-					<div style={{textAlign: 'right'}}>
-						<Radio.Group value='unRegister'>
-							<Radio.Button value="unRegister">未归档</Radio.Button>
-							<Radio.Button value="register">已归档</Radio.Button>
-						</Radio.Group>
-					</div>
+					{/*<div style={{textAlign: 'right'}}>*/}
+						{/*<Radio.Group value='unRegister'>*/}
+							{/*<Radio.Button value="unRegister">未归档</Radio.Button>*/}
+							{/*<Radio.Button value="register">已归档</Radio.Button>*/}
+						{/*</Radio.Group>*/}
+					{/*</div>*/}
 					<div className="createBtn">
 						<Button>
 							<Icon type="download"></Icon>下载数据

@@ -14,7 +14,7 @@ const unitInfo = {
 		link:'http://47.105.115.5:8000/',
 		style:'三图',
 		type:'理财',
-		title:'妻子在家用微信半个月居然提了辆车，丈夫感觉不对劲，真相遭曝光！',
+		title:'闺蜜在家玩微信，一个月时间就提新车，真相遭曝光！',
 		fileList:[{
 			uid: '-1',
 			name: 'xxx.png',
@@ -55,7 +55,7 @@ const unitInfo = {
 			url: '/static/images/2_3.jpg',
 		}]
 	},
-	'get_62':{
+	'get_79':{
 		name:'get_79',
 		link:'http://47.105.115.5:8000/',
 		style:'三图',
@@ -65,17 +65,17 @@ const unitInfo = {
 			uid: '-1',
 			name: 'xxx.png',
 			status: 'done',
-			url: '/static/images/2_1.jpg',
+			url: '/static/images/3_1.jpg',
 		},{
 			uid: '0',
 			name: 'xxx.png',
 			status: 'done',
-			url: '/static/images/2_2.jpg',
+			url: '/static/images/3_2.jpg',
 		},{
 			uid: '1',
 			name: 'xxx.png',
 			status: 'done',
-			url: '/static/images/2_3.jpg',
+			url: '/static/images/3_3.jpg',
 		}]
 	}
 }

@@ -115,7 +115,7 @@ class Index extends Component {
 						<a  onClick={this.loginOut} href="javascript:;" className="header-item logout" style={{ width:'64px' }}>
 							<Icon type="logout" />
 						</a>
-						<div className="header-item comp"><Icon type="user" /><span style={{ marginLeft:'10px' }}>浙江宅神网络科技有限公司</span></div>
+						<div className="header-item comp"><Icon type="user" /><span style={{ marginLeft:'10px' }}>湖北点滴网络科技有限公司</span></div>
 					</Header>
 					<Content>
 						<div id="content" >
@@ -132,7 +132,7 @@ class Index extends Component {
 						</div>
 					</Content>
 					<Footer>
-						<strong>Copyright © 2018 书铭信息科技（上海）有限公司</strong>
+						<strong>Copyright © 2018 书洺信息科技（上海）有限公司</strong>
 					</Footer>
 				</Layout>
 			</Layout>

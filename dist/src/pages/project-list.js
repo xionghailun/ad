@@ -67,13 +67,13 @@ class AdvertiserList extends Component {
 					<Button style={{width: '65px'}} type="primary">查询</Button>
 				</div>
 				<div className="grid">
-					<div style={{textAlign: 'right'}}>
-						<Radio.Group value='unRegister'>
-							<Radio.Button value="unRegister">未归档</Radio.Button>
-							<Radio.Button value="register">已归档</Radio.Button>
-						</Radio.Group>
-					</div>
-					<Button type="primary" style={{ position:'absolute',right:45,top:70,zIndex:99 }} onClick={this.createProject} ><Icon type="plus"></Icon>新建</Button>
+					{/*<div style={{textAlign: 'right'}}>*/}
+						{/*<Radio.Group value='unRegister'>*/}
+							{/*<Radio.Button value="unRegister">未归档</Radio.Button>*/}
+							{/*<Radio.Button value="register">已归档</Radio.Button>*/}
+						{/*</Radio.Group>*/}
+					{/*</div>*/}
+					<Button type="primary" style={{ position:'absolute',right:45,top:35,zIndex:99 }} onClick={this.createProject} ><Icon type="plus"></Icon>新建</Button>
 					<Table columns={this.state.columns} dataSource={this.state.data} />
 				</div>
 			</div>
