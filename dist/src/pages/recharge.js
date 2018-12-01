@@ -43,7 +43,7 @@ class Recharge extends Component {
 						{...formItemLayout}
 						label="收款方"
 					>
-						<Input name="adver" value="浙江宅神网络科技有限公司" disabled />
+						<Input name="adver" value="湖北点滴网络科技有限公司" disabled />
 					</FormItem>
 					<FormItem
 						{...formItemLayout}

@@ -14,7 +14,7 @@ const unitInfo = {
 		link:'http://47.105.115.5:8000/',
 		style:'三图',
 		type:'理财',
-		title:'闺蜜在家玩微信，一个月时间就提新车，真相遭曝光！',
+		title:'月薪三千的闺蜜闲时手机玩赚，三个月买超跑！',
 		fileList:[{
 			uid: '-1',
 			name: 'xxx.png',
@@ -37,7 +37,7 @@ const unitInfo = {
 		link:'http://47.105.115.5:8000/',
 		style:'三图',
 		type:'理财',
-		title:'姐妹花用手机玩赚，集体逆袭白富美，嗨爆朋友圈！',
+		title:'江苏大叔意外学会手机玩赚，微信零钱月入过万！',
 		fileList:[{
 			uid: '-1',
 			name: 'xxx.png',
@@ -60,7 +60,7 @@ const unitInfo = {
 		link:'http://47.105.115.5:8000/',
 		style:'三图',
 		type:'理财',
-		title:'姐妹花用手机玩赚，集体逆袭白富美，嗨爆朋友圈！',
+		title:'美女主播闲时靠手机这样玩，逆袭白富美！',
 		fileList:[{
 			uid: '-1',
 			name: 'xxx.png',
