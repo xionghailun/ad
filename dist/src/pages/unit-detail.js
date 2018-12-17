@@ -84,12 +84,22 @@ class CampaignDetail extends Component {
 	constructor(props) {
 		super(props);
 		console.log(props);
+		let data = props.location.state.rowdata;
+		data.fileList = data.fileList.split(',').map(function(file,idx){
+			return {
+				uid:idx,
+				name: 'xxx.png',
+				status: 'done',
+				url: '/static/images/'+file,
+			};
+		});
+		console.log('---',data)
 		this.state = {
 			isEdit:false,
-			info:unitInfo[props.location.state.name],
+			info:data,
 			previewVisible:false,
 			previewImage:''
-		}
+		};
 		this.toggleState = this.toggleState.bind(this);
 	}
 	toggleState() {
@@ -131,11 +141,11 @@ class CampaignDetail extends Component {
 							label="点击动作"
 							{...formItemLayout}
 						>
-							<Select defaultValue="lucy" disabled={!this.state.isEdit}>
-								<Option value="jack">下载</Option>
-								<Option value="lucy">跳转</Option>
-								<Option value="disabled">微信小程序分享</Option>
-								<Option value="Yiminghe">deepLink</Option>
+							<Select value={this.state.info.action} disabled={!this.state.isEdit}>
+								<Option value="下载">下载</Option>
+								<Option value="跳转">跳转</Option>
+								<Option value="微信小程序分享">微信小程序分享</Option>
+								<Option value="deepLink">deepLink</Option>
 							</Select>
 						</FormItem>
 						<FormItem

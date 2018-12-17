@@ -16,11 +16,11 @@ class AdvertiserList extends Component {
 				message.success('状态修改成功！');
 			});
 	};
-	toDetail = (uname)=> {
+	toDetail = (data)=> {
 		this.props.history.push({
 			pathname:'/ad/unit/detail',
 			state:{
-				name:uname
+				rowdata:data
 			}
 		})
 	};
@@ -77,7 +77,7 @@ class AdvertiserList extends Component {
 				return (
 					<div>
 						<Switch checkedChildren="启用" unCheckedChildren="暂停" checked={state===0 ? false : true} onChange={(state)=>{this.stateChange(state,idx,data.id)}} style={{ marginRight:'10px',verticalAlign:'middle' }} />
-						<Button style={{ float:'right' }} onClick={()=>{this.toDetail(data.uname)}}>详情</Button>
+						<Button style={{ float:'right' }} onClick={()=>{this.toDetail(data)}}>详情</Button>
 					</div>
 				)
 			}
